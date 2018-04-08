@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+	http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd"
+	default-lazy-init="true">
+	
+	<!-- 
+		此文件：		
+			yhdmvc-servlet-core-service.xml	
+		被文件：		
+			web.xml		
+		所引用。
+		
+		说明：此文件记录所有manager和dao信息的bean。
+	-->
+	
+	<!-- 用户 -->
+	<bean id="FlxoaUserMng" class="com.yhd.yhdmvc.module.login.manager.impl.YhdmvcUserManagerImpl" />
+	<bean id="FlxoaUserDao" class="com.yhd.yhdmvc.module.login.dao.impl.YhdmvcUserDaoImpl" />
+
+
+
+</beans>

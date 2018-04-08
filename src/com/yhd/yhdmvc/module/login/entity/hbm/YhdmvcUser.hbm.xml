@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.yhd.yhdmvc.module.login.entity">
+	<class name="YhdmvcUser" table="yhdmvc_user">
+		<meta attribute="sync-DAO">false</meta>
+
+		<cache usage="read-write"/>
+
+		<id name="Id" type="string" column="id">
+			<generator class="uuid" />
+		</id>
+
+		<property name="LoginName" column="login_name" type="string"
+			not-null="false" length="100" />
+		<property name="DisplayName" column="display_name" type="string"
+			not-null="false" length="100" />
+		<property name="Password" column="password" type="string"
+			not-null="false" length="100" />
+		<property name="UpdateTime" column="update_time" type="timestamp"
+			not-null="false" length="19" />
+		<property name="Description" column="description" type="string"
+			not-null="false" length="100" />
+
+
+	</class>
+</hibernate-mapping>
